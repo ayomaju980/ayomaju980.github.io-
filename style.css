@@ -1,0 +1,91 @@
+:root{
+    --mainColor : #021436;
+    --secondaryColor : #011844;
+    --acsentColor : #DD7900;
+}
+
+body{
+    background-color: var(--mainColor);
+    min-height: 900px;
+    font-family: 'jakartasans', roboto;
+}
+
+/* Navbar */
+.nav-link.active {
+    color: var(--acsentColor) !important;
+    font-weight: 700;
+    transition: .8s;
+}
+
+.nav-dark{
+    background-color: var(--secondaryColor) !important;
+    z-index: 10;
+}
+/* end Navbar */
+
+/* profile */
+.color-acsent {
+    color: var(--acsentColor);
+}
+#Profile {
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 75px;
+}
+
+#Profile h1 {
+    font-size: 300;
+}
+
+#Profile h2 {
+    font-size: 2.5rem;
+}
+#Profile p {
+    font-size: 1.1rem;
+}
+
+.cv {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.social-icon svg {
+    margin-right: .7em;
+    margin-bottom: 10px;
+}
+
+.social-icon.footer svg{
+    margin-right: 7em;
+    margin-bottom: 10px;
+}
+/* skill */
+#skill{
+    min-height: 600px;
+    width: 100%;
+    color: #fff;
+}
+#skill img{
+    width: 8%;
+    margin: 8px;
+}
+/* end skill*/
+
+/*sertifikat*/
+#sertifikat{
+    margin-top: -170px;
+    color: #fff;
+    padding: 270px;
+    padding-bottom: 80px;
+    background-color: var(--secondaryColor);
+}
+
+#sertifikat p, a {
+    color: #fff !important;
+    text-decoration: none;
+}
+#sertifikat img{
+    width: 30%;
+    padding: 10px;
+}
+/*end sertifikat*/
