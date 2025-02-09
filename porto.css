@@ -1,0 +1,265 @@
+:root{
+    --mainColor : #821131;
+    --secondaryColor : #32012F;
+    --acsentColor : #DD7900;
+}
+
+body{
+    background-color: inherit;
+    min-height: 900px;
+    font-family: 'jakartasans', roboto;
+}
+
+/* Navbar */
+.nav-link.active {
+    color: var(--acsentColor) !important;
+    font-weight: 700;
+    transition: .8s;
+}
+
+.nav-link {
+    color: currentColor !important;
+}
+
+
+.nav-dark {
+    background-color: #821131 !important;
+    z-index: 10;
+    color: #fff !important;
+}
+
+body.light {
+    background: #EEEEEE;
+    color: #000;
+}
+
+body.dark {
+    background: #000;
+    color: #ffffff;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.toggle-container button {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+}
+
+/* Garis putus-putus antar tombol */
+.toggle-container button:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 10px;
+    height: 5px;
+    border-top: 1px dashed #000B58;
+}
+
+/* end Navbar */
+
+/* HEADLINE */
+
+#headline h1{
+    color: currentColor;
+    padding-top: 40px;
+    font-size: 90px;
+}
+
+#headline .container {
+    padding: 80px 10px;
+}
+
+/* PORTOFOLIO SECTIONS */
+.section-porto, .section-porto2, .section-porto3, .section-porto4, .section-porto5, .section-porto6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #000;
+}
+
+/* COMMON STYLES FOR PORTFOLIO BOXES */
+.porto-box, .porto2-box, .porto3-box, .porto4-box, .porto5-box, .porto6-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 900px;
+    height: 350px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.porto-text, .porto2-text, .porto3-text, .porto4-text, .porto5-text, .porto6-text {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.porto-text a {
+    color: #333;
+    font-size: 1px;
+}
+
+.porto-text p{
+    color:#333;
+    font-size: 5px;
+}
+
+/* IMAGE STYLES */
+.porto-image, .porto2-image, .porto3-image, .porto4-image, .porto5-image, .porto6-image {
+    width: 420px;
+    height: 320px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.porto2-image, .porto3-image {
+    height: 280px;
+}
+
+/* QR CODE STYLES */
+.porto-qr, .porto2-qr, .porto3-qr, .porto4-qr, .porto5-qr, .porto6-qr {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+/* CONTENT LAYOUT */
+.porto-content, .porto2-content, .porto3-content, .porto4-content, .porto5-content, .porto6-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.porto-left, .porto2-left, .porto3-left, .porto4-left, .porto5-left, .porto6-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.porto-right, .porto2-right, .porto3-right, .porto4-right, .porto5-right, .porto6-right {
+    display: flex;
+    align-items: center;
+}
+
+/* DESCRIPTION SECTION */
+#des1 {
+    margin-top: -150px;
+    color: #000;
+    padding: 150px;
+    padding-bottom: 180px;
+    background-color: #fff;
+}
+
+#des1 h1 {
+    font-size: 300;
+}
+
+#des1 h2 {
+    font-size: 1rem;
+}
+
+#des1 p {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+/*footer*/
+.py-5 {
+            color: inherit !important;
+        }
+
+        .social-icons a {
+            color: inherit !important;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icon-footer{
+            color: inherit !important:
+        }
+
+/* Responsive CSS */
+
+@media (max-width: 1200px) {
+    .porto-box, .porto2-box, .porto3-box, .porto4-box, .porto5-box, .porto6-box {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .porto-image, .porto2-image, .porto3-image, .porto4-image, .porto5-image, .porto6-image {
+        width: 100%;
+        height: auto;
+    }
+    .porto-content, .porto2-content, .porto3-content, .porto4-content, .porto5-content, .porto6-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-link {
+        font-size: 14px;
+    }
+    .toggle-container {
+        top: 5px;
+        right: 5px;
+    }
+    #des1 {
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .porto-box, .porto2-box, .porto3-box, .porto4-box, .porto5-box, .porto6-box {
+        width: 100%;
+    }
+    .porto-text, .porto2-text, .porto3-text, .porto4-text, .porto5-text, .porto6-text {
+        font-size: 16px;
+    }
+    #headline, #portofolio {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .porto-box, .porto2-box, .porto3-box, .porto4-box, .porto5-box, .porto6-box {
+        width: 95%;
+        padding: 10px;
+    }
+    .porto-text, .porto2-text, .porto3-text, .porto4-text, .porto5-text, .porto6-text {
+        font-size: 14px;
+    }
+    .porto-qr, .porto2-qr, .porto3-qr, .porto4-qr, .porto5-qr, .porto6-qr {
+        width: 40px;
+        height: 40px;
+    }
+    .toggle-container {
+        top: 3px;
+        right: 3px;
+    }
+    #des1 {
+        padding: 50px 10px;
+    }
+}

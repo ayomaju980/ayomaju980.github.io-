@@ -1,0 +1,215 @@
+:root{
+    --mainColor : #821131;
+    --secondaryColor : #32012F;
+    --acsentColor : #DD7900;
+}
+body{
+    background-color: inherit;
+    min-height: 900px;
+    font-family: 'jakartasans', roboto;
+}
+/* Navbar */
+.nav-link.active {
+    color: var(--acsentColor) !important;
+    font-weight: 700;
+    transition: .8s;
+}
+
+.nav-link {
+    color: currentColor !important;
+}
+
+
+.nav-dark{
+    background-color: #821131 !important;
+    z-index: 10;
+    color :#fff !important;
+}
+
+body.light {
+    background: #EEEEEE;
+    color: #000;
+}
+
+body.dark {
+    background: #000;
+    color: #ffffff;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.toggle-container button {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+}
+
+/* Garis putus-putus antar tombol */
+.toggle-container button:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 10px;
+    height: 5px;
+    border-top: 1px dashed #000B58;
+}
+
+/* end Navbar */
+
+/*judul*/
+#judul hr {
+    width: 35%;
+    height: 5px;
+    color: var(--acsentColor);
+    margin: 0 auto;
+    opacity: 100%;
+}
+#judul h1 {
+    color:currentColor;
+    padding-top: 40px;
+    font-size: 90px;
+ }
+
+ #judul p{
+    color: currentColor;
+    padding-top: 20px;
+    font-size: 25px;
+ }
+
+ #judul .container{
+    padding: 80px 10px;
+ }
+/*end judul*/
+
+
+/*isi*/
+#email .container {
+            padding: 50px;
+        }
+        h2 {
+            margin-bottom: 40px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        #email button {
+            background: #5a3fcf;
+            color: #fff;
+            border: none;
+            padding: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #4338ca;
+        }
+
+
+/*detail*/
+#detail h1{
+    padding-top: 40px;
+    font-size: 40px;
+}
+#detail p{
+    padding-top: 10px;
+    font-size: 1em;
+}
+
+
+/*footer*/
+.py-5 {
+            color: inherit !important;
+        }
+
+        .social-icons a {
+            color: inherit !important;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icon-footer{
+            color: inherit !important;
+        }
+/* Responsive CSS */
+
+/* Untuk layar besar (desktop) */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+/* Untuk tablet */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    #judul hr {
+        width: 50%;
+    }
+    #email .container {
+        width: 90%;
+        padding: 40px;
+    }
+    input, textarea {
+        font-size: 14px;
+    }
+    #email button {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Untuk smartphone */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    #judul hr {
+        width: 70%;
+    }
+    #judul .container {
+        padding: 40px 10px;
+    }
+    #email .container {
+        width: 95%;
+        padding: 30px;
+    }
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #email button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .toggle-container {
+        top: 5px;
+        right: 5px;
+    }
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

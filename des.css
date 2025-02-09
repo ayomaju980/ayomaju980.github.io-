@@ -1,0 +1,318 @@
+:root {
+    --mainColor: #821131;
+    --secondaryColor: #32012F;
+    --acsentColor: #DD7900;
+}
+
+body {
+    background-color: inherit;
+    min-height: 900px;
+    font-family: 'JakartaSans', Roboto, sans-serif;
+}
+
+/* Navbar */
+.nav-link.active {
+    color: var(--acsentColor) !important;
+    font-weight: 700;
+    transition: .8s;
+}
+
+.nav-link {
+    color: currentColor !important;
+}
+
+
+.nav-dark {
+    background-color: #821131 !important;
+    z-index: 10;
+    color: #fff !important;
+}
+
+body.light {
+    background: #EEEEEE;
+    color: #000;
+}
+
+body.dark {
+    background: #000;
+    color: #ffffff;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.toggle-container button {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+}
+
+/* Garis putus-putus antar tombol */
+.toggle-container button:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 10px;
+    height: 5px;
+    border-top: 1px dashed #000B58;
+}
+
+/* end Navbar */
+
+
+/*judul*/
+#judul h1, #judul2 h1, #judul3 h1,
+#judul4 h1,
+#judul5 h1 {
+    padding-top: 180px;
+    font-size: 70px;
+    color: currentColor;
+}
+
+#judul p, #judul2 p, #judul3 p, #judul4 p, #judul5 p {
+    padding-top: 10px;
+    font-size: 20px;
+    color: currentColor;
+}
+
+/*end judul*/
+
+/* General Section Styles */
+.section-porto,
+.section-porto2,
+.section-porto3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    color: #000;
+}
+
+.porto-box,
+.porto2-box,
+.porto3-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 900px;
+    height: 350px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.porto-text,
+.porto2-text,
+.porto3-text  {
+    color: #000 !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.porto-text a,
+.porto2-text a,
+.porto3-text a {
+    color: #333;
+    font-size: 1px;
+}
+
+.porto-image,
+.porto2-image,
+.porto3-image {
+    width: 420px;
+    height: 320px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.porto-qr,
+.porto2-qr,
+.porto3-qr {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.porto-content,
+.porto2-content,
+.porto3-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.porto-left,
+.porto2-left,
+.porto3-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.porto-right,
+.porto2-right,
+.porto3-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Descriptions */
+#des1,
+#des2,
+#des3 {
+    margin-top: -180px;
+    color: currentColor;
+    padding: 150px 150px 180px;
+}
+
+#des1 h1,
+#des2 h1,
+#des3 h1,{ 
+    font-size: 300;
+}
+
+#des1 p,
+#des1 a,
+#des2 p,
+#des2 a,
+#des3 p,
+#des3 a,{
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+
+    .section-porto,
+    .section-porto2,
+    .section-porto3 {
+        padding: 100px;
+    }
+
+    .porto-box,
+    .porto2-box,
+    .porto3-box {
+        width: 750px;
+        height: 320px;
+    }
+
+    .porto-image,
+    .porto2-image,
+    .porto3-image {
+        width: 350px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .section-porto,
+    .section-porto2,
+    .section-porto3 {
+        padding: 80px;
+    }
+
+    .porto-box,
+    .porto2-box,
+    .porto3-box {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .porto-content,
+    .porto2-content,
+    .porto3-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .porto-image,
+    .porto2-image,
+    .porto3-image {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-porto,
+    .section-porto2,
+    .section-porto3 {
+        padding: 60px;
+    }
+
+    #des1,
+    #des2,
+    #des3 {
+        padding: 80px;
+        margin-top: -100px;
+    }
+
+    #des1 h2,
+    #des2 h2,
+    #des3 h2 {
+        font-size: 2rem;
+    }
+
+    .porto-box,
+    .porto2-box,
+    .porto3-box {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .section-porto,
+    .section-porto2,
+    .section-porto3 {
+        padding: 40px;
+    }
+
+    .porto-box,
+    .porto2-box,
+    .porto3-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .porto-image,
+    .porto2-image,
+    .porto3-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #des1,
+    #des2,
+    #des3 {
+        padding: 60px;
+        text-align: center;
+    }
+
+    #des1 h2,
+    #des2 h2,
+    #des3 h2 {
+        font-size: 1.8rem;
+    }
+}

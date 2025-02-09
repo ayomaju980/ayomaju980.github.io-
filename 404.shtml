@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whoops!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            background: #FAFAFA;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .image-container img {
+            max-width: 40%;
+            height: auto;
+            margin-bottom: 20px; /* Spasi antara gambar dan teks */
+            margin-top: 30px;
+        }
+        .title {
+            color: #3061AD;
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .description {
+            color: #272727;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            margin-top: 10px;
+        }
+        .description a {
+            color: #3061AD;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="404.jpg" alt="Maintenance Image">
+        </div>
+        <div class="title">Under Maintenance</div>
+        <div class="description">
+            We apologize for the inconvenience, but we're performing some maintenance.<br>
+            You can still contact us at <a href="/Home">Go back to home</a>. We'll be back up soon!
+        </div>
+    </div>
+</body>
+</html>
